@@ -38,7 +38,6 @@ export default class Edit extends Component {
 
 	onSubmit = async (e) => {
 		e.preventDefault();
-		// console.log(this.state);
 		const obj = {
 			name: this.state.name,
 			email: this.state.email,

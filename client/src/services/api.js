@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080';
+const searchByName = (q) => axios.get(`http://localhost:8080/?name=${q}`).then((response) => response.data.data);
+const searchByCity = (q) => axios.get(`http://localhost:8080/?city=${q}`).then((response) => response.data.data);
+const searchByEmail = (q) => axios.get(`http://localhost:8080/?email=${q}`).then((response) => response.data.data);
+const searchByPhone = (q) => axios.get(`http://localhost:8080/?phone=${q}`).then((response) => response.data.data);
+const searchByFunds = (q) => axios.get(`http://localhost:8080/?funds=${q}`).then((response) => response.data.data);
 
-const getAllPersons = () => axios.get(BASE_URL).then((response) => response.data.data);
-const updatePerson = (person) => axios.put(BASE_URL, person).then((response) => response.data.data);
-
-export { getAllPersons, updatePerson };
+export { searchByName, searchByCity, searchByEmail, searchByPhone, searchByFunds };

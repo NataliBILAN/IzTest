@@ -21,6 +21,7 @@ const ClientsList = ({ persons }) => (
 					<input type="text" name="email" value={person.email} disabled />
 					<input type="text" name="funds" value={person.funds} disabled />
 					<input type="text" name="city" value={person.city} disabled />
+					<input type="text" name="phone" value={person.phone} disabled />
 					<StyledLink to={`edit/${person.id}`} className="btn btn-primary">
 						Edit
 					</StyledLink>
@@ -61,6 +62,7 @@ const Row = styled.div`
 `;
 
 const Cell = styled.p`
+	margin: 0;
 	width: 16%;
 	font-size: 20px;
 	font-weight: 500;
